@@ -11,10 +11,17 @@ public class CorsConfig {
     @Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
+
             @Override
             public void addCorsMappings(CorsRegistry registry) {
+
                 registry.addMapping("/**")
-                        .allowedOrigins("http://localhost:5173", "http://localhost:3000")
+                        .allowedOrigins(
+                                "http://localhost:5173",
+                                "http://localhost:3000",
+                                "https://tailor-ai-mwaz.vercel.app",
+                                "https://tailor-ai-mwaz-7vb0j8khd-thanu2.vercel.app"
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);
