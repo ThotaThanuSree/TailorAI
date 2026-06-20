@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Base URL points to our Spring Boot backend
-const API_BASE_URL = 'http://localhost:8080/api';
+const API_BASE_URL = 'https://tailorai-hpc9.onrender.com/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
